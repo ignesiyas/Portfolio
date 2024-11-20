@@ -1,5 +1,9 @@
 import * as React from 'react';
-function navbar(){
+import { MouseEvent } from 'react';
+function Navbar(){
+    // for handling event //
+    const handleEvent = (event : MouseEvent) => alert(event.detail);
+    // for handling event //
     return <nav className="navbar navbar-expand-lg bg-body-tertiary">
     <div className="container-fluid customnavheader">
       <a className="navbar-brand" href="#">Home</a>
@@ -9,7 +13,7 @@ function navbar(){
       <div className="collapse navbar-collapse" id="navbarNav">
         <ul className="navbar-nav">
           <li className="nav-item">
-            <a className="nav-link active" aria-current="page" href="#">About</a>
+            <a className="nav-link active" aria-current="page" href="#" onClick={handleEvent}>About</a>
           </li>
         </ul>
       </div>
@@ -17,4 +21,4 @@ function navbar(){
   </nav>
 }
 
-export default navbar;
+export default Navbar;
