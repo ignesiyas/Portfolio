@@ -1,7 +1,9 @@
 import Navbar from "./Component/eventhandling";
-import Listgroup from "./Component/UseState";
+import ListgroupProp from "./Component/Prop";
 function PortfoloioMain(){
-  return <div><Navbar/><Listgroup/></div>
+  let listvalues = ["First","second","third","fourth","Five"];
+  //given values to the prop
+  return <div><Navbar/><ListgroupProp{...listvalues={listvalues}}/></div>
 }
 
 export default PortfoloioMain;
